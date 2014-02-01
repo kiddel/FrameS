@@ -8,5 +8,9 @@ class Model {
 		$obj = new $model();
 		return $obj;
 	}
+	static public function table($name){
+		global $_config;
+		return $_config['db']['prefix'].$name;
+	}
 	public function __destruct(){}
 }

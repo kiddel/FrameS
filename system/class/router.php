@@ -31,7 +31,8 @@ class Router {
 		require ROOT.'./app/controllers/'.$router['controller'].'.php';
 		$controller = $router['controller'];
 		$function = $router['function'];
-		$controller::$function();
+		$obj = new $controller();
+		$obj->$function();
 	}
 	public function __destruct(){}
 }

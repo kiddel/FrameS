@@ -10,7 +10,7 @@ class View {
 		include $cache;
 		unlink($cache);
 	}
-	private function parse($file){
+	static private function parse($file){
 		$template = file_get_contents($file);
 		$template = '<?php if(!defined("IN_FRAMES")) exit("Access Denied"); ?>'."\n".$template;
 		$template = preg_replace("/\<\!\-\-\{(.+?)\}\-\-\>/s", "{\\1}", $template);

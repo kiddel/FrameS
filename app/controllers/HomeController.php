@@ -4,7 +4,7 @@ class HomeController extends BaseController {
 	public function __construct(){
 		parent::__construct();
 	}
-	public function index(){
+	static public function index(){
 		$vars = array(
 			'test'=>'test123',
 			'hello' => 'Hello World!',
